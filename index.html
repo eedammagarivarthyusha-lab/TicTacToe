@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app">
+        <header class="top">
+            <h1>Tic-Tac-Toe</h1>
+            <p>Think&nbsp;&nbsp;·&nbsp;&nbsp;Play&nbsp;&nbsp;·&nbsp;&nbsp;Win</p>
+        </header>
+
+        <!-- Home Screen -->
+        <section id="homeScreen" class="screen active">
+            <div class="menu">
+                <button class="menu-btn" id="pvpBtn">
+                    <span>Player vs Player</span>
+                    <span>→</span>
+                </button>
+
+                <button class="menu-btn" id="computerBtn">
+                    <span>Player vs Computer</span>
+                    <span>→</span>
+                </button>
+
+                <button class="scores-link" id="scoresBtn">View Scores</button>
+            </div>
+        </section>
+
+        <!-- Symbol Selection -->
+        <section id="symbolScreen" class="screen">
+            <button class="back-btn" id="backToHome">←</button>
+
+            <div class="setup">
+                <h2>Choose Your Symbol</h2>
+                <p id="setupText">You are playing as</p>
+
+                <div class="symbol-choice">
+                    <button class="symbol-btn selected" data-symbol="X">X</button>
+                    <button class="symbol-btn" data-symbol="O">O</button>
+                </div>
+
+                <button class="main-btn" id="continueBtn">Continue&nbsp;&nbsp;→</button>
+            </div>
+        </section>
+
+        <!-- Game Screen -->
+        <section id="gameScreen" class="screen">
+            <div class="game-top">
+                <button class="back-btn" id="backToMenu">←</button>
+                <span id="turnText">Player X's Turn</span>
+                <span class="symbols">X&nbsp;&nbsp;O</span>
+            </div>
+
+            <div class="score-bar">
+                <div><span>X Wins</span><strong id="xScore">0</strong></div>
+                <div><span>O Wins</span><strong id="oScore">0</strong></div>
+                <div><span>Draws</span><strong id="drawScore">0</strong></div>
+            </div>
+
+            <div class="board" id="board">
+                <button class="cell" data-index="0"></button>
+                <button class="cell" data-index="1"></button>
+                <button class="cell" data-index="2"></button>
+                <button class="cell" data-index="3"></button>
+                <button class="cell" data-index="4"></button>
+                <button class="cell" data-index="5"></button>
+                <button class="cell" data-index="6"></button>
+                <button class="cell" data-index="7"></button>
+                <button class="cell" data-index="8"></button>
+            </div>
+
+            <button class="restart-btn" id="restartBtn">↻&nbsp;&nbsp; Restart Game</button>
+        </section>
+
+        <!-- Scores Screen -->
+        <section id="scoresScreen" class="screen">
+            <button class="back-btn" id="backFromScores">←</button>
+
+            <div class="scores-page">
+                <h2>Scores</h2>
+
+                <div class="score-row">
+                    <span>X</span>
+                    <span>X Wins</span>
+                    <strong id="xScorePage">0</strong>
+                </div>
+
+                <div class="score-row">
+                    <span>O</span>
+                    <span>O Wins</span>
+                    <strong id="oScorePage">0</strong>
+                </div>
+
+                <div class="score-row">
+                    <span>—</span>
+                    <span>Draws</span>
+                    <strong id="drawScorePage">0</strong>
+                </div>
+
+                <button class="reset-score-btn" id="resetScoresBtn">↻&nbsp;&nbsp; Reset Scores</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Result Popup -->
+    <div class="overlay" id="resultOverlay">
+        <div class="result-popup">
+            <button class="close-popup" id="closePopup">×</button>
+            <div class="celebration" id="celebration">✦</div>
+            <h2 id="resultTitle">YOU WIN!</h2>
+            <p id="resultMessage">Player X</p>
+            <p class="small-message" id="resultSubtext">Great game!</p>
+            <button class="main-btn" id="playAgainBtn">Play Again</button>
+            <button class="text-btn" id="popupMenuBtn">Back to Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
