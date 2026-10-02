@@ -1,5 +1,3 @@
-# VOSC Activity-1
-
 ## Tic-Tac-Toe
 
 A simple Tic-Tac-Toe game built using only HTML, CSS and JavaScript.
@@ -18,7 +16,7 @@ A simple Tic-Tac-Toe game built using only HTML, CSS and JavaScript.
 ### Project Structure
 
 ```text
-VOSC Activity-1/
+TicTacToe/
 ├── index.html
 ├── style.css
 ├── script.js
